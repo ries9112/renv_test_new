@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("renv")
-          #renv::restore()
+          renv::restore()
           library(pins)
         shell: Rscript {0}
       - name: Check
