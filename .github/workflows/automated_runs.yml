@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: windows-latest
     strategy:
       matrix:
         r-version: [3.6.3]
@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("renv")
-          #renv::restore()
+          renv::restore()
           library(pins)
         shell: Rscript {0}
       - name: Check
