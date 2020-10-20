@@ -30,9 +30,10 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("renv")
-          renv::restore()
+          #renv::restore()
           library(pins)
         shell: Rscript {0}
       - name: Check
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
+      
